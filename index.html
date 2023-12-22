@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Challenge</title>
+  <link href="3style.css" type="text/css" rel="stylesheet"/>
+<style>
+* {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 55%;
+  min-width: 750px;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.column2 {
+  padding-top: 10px;
+  width: 45%;
+  display: flex;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.button{
+    float: center;
+    background-color: #fef9e6;
+    border: 3px solid #fef9e6;
+    border-radius: 50px;
+    color: #00003c
+    font-weight: semibold;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0px 0px 10px #a4a4a4;
+}
+.loadiframehere{
+  border: none;
+}
+.paragraph {
+    color: #00003c;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: thin;
+    padding-left: 10px;
+}
+.header {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 5px 5px 10px;
+    text-align: center;
+    z-index: -1;
+    }
+.footer {
+  background-color: #282726;
+  width: 100%;
+  color: #fef9e6;
+  font-family: 'Lato', sans-serif;
+  font-size: 9px;
+  font-weight: thin;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  height: 2.5rem;
+}
+</style>
+
+</head>
+
+<body>
+<div class="header">
+  <a href="https://atlasschool.com">
+    <img src="/images/atlas-school-logo.png" alt="coding school tulsa" width="150px"></img>
+  </a>
+</div>
+<div class="row"> 
+  <div class="column1"> <!-- Column 1-->
+  
+    <div id="term_wrap">
+      <div id="term_container">
+      </div>
+      <div>
+        <progress id="net_progress">
+        </progress>
+      </div>
+    </div>
+    <script type="text/javascript" src="term.js"></script>
+    <script type="text/javascript" src="jslinux.js"></script>
+
+  </div> <!-- End Column 1-->
+  
+  <div class="column2"> <!-- Column 2-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        var tok = urlParams.get('tokee').toString()
+        console.log(tok);
+        var newToken = "tokee=" + tok;
+        console.log(newToken);
+        var newTok = "https://holbertontulsa.typeform.com/to/RNq1CcVR#tokee=" + newToken;
+        console.log(newTok);
+        console.log(newTok.toString());
+        function visitPage(){
+          var work = document.createElement("IFRAME");
+          work.setAttribute("src", newTok.toString());
+          work.setAttribute("width","500px");
+          work.setAttribute("height", "540px");
+          work.setAttribute("border", "none");
+          work.setAttribute("frameborder", "0px");
+          document.getElementById("loadiframehere").appendChild(work);
+        }
+        function hideButton(btn){
+          btn.style.display = "none";
+        }
+    </script>
+      
+      <button type="button" class="button" onclick="visitPage(); hideButton(this);">Begin</button>
+      <div id="loadiframehere" border="none">
+        </div>
+  </div> <!-- End Column 2-->
+
+  <div class="footer" background-color="#282726">
+    <p>This is designed for a full-width desktop window to ensure elements load properly. &copy; Atlas School. All rights reserved.</p>
+  </div>
+</div>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8772819.js"></script>
+<!-- End of HubSpot Embed Code -->
+</body>
+</html>

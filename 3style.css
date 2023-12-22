@@ -1,0 +1,47 @@
+.term {
+    font-family: 'Roboto Mono',monospace,sans-serif;
+    font-size: 15px;
+    color: #00003c;
+    background: #1ed2af;
+    height:800px;
+    width: 100%;
+}
+
+.term_content a {
+    color: #d00414;
+}
+
+.term_cursor {
+    color: #00003c;
+    background: #1ed2af;
+}
+
+.term_scrollbar { background: transparent url(images/3bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; height: 100%; }
+.term_track { background: transparent url(images/3bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.term_thumb { background: transparent url(images/3bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+.term_thumb .term_end { background: transparent url(images/3bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+#term_paste {
+    border: 1px solid;
+    height: 19px;
+}
+
+label {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.loadiframehere {
+    border: 3px solid #1ed2af;
+    border-radius: 25px;
+}
+
+.button{
+    background-color: #fef9e6;
+    border: 2px solid #00003c;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+}
